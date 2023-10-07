@@ -83,3 +83,8 @@ edit_uri:
 
 plugins:
     - search
+
+nav:
+    - Raymond Lau Blog:
+          - 介绍: index.md
+          - MKDocs: MKDocs.md
