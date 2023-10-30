@@ -1,11 +1,11 @@
-# git常用命令
+# git开发全搞定
 
 ## 1.git源码及最新发布版本
 https://github.com/git/  
 https://mirrors.edge.kernel.org/pub/software/scm/git/
 
 
-## 2.初始设置
+## 2.初始设置
 
 ### 2.1 设置用户名、邮箱等基础信息
 
@@ -46,7 +46,7 @@ git config --global merge.tool vimdiff
 ssh-keygen -t rsa -C "1649750212@qq.com"
 ```
 
-> 本地会在～/.ssh，目录下生成id_rsa.pub公钥文件和id_rsa私钥文件
+> 本地会在～/.ssh，目录下生成id_rsa.pub公钥文件和id_rsa私钥文件
 
 ```bash
 # 查看公钥内容
@@ -63,7 +63,7 @@ ssh -T git@github.com
 
 ![git工作区域](gitfigs/git工作区域.png)
 
-## 3.1git创建仓库
+### 3.1git创建仓库
 ```bash
 # 在本地初始化一个git仓库
 git init
@@ -74,8 +74,7 @@ git clone <repo> # 拷贝到当前目录
 git clone <repo> <directory> # 拷贝到指定目录
 ```
 
-## 3.2git基本操作
-1. git本地提交操作
+### 3.2git本地提交操作
 ```bash
 # git add 将文件添加到暂存区
 git add . # 添加所有文件
@@ -120,7 +119,7 @@ git stash list # 查看堆栈中隐藏的更改
 git stash pop # 从堆栈中删除更改，并放置到当前工作目录中
 ```
 
-2. git日志及状态操作
+### 3.3git日志及状态操作
 ```bash
 # git status查看git仓库当前状态
 git status
@@ -136,7 +135,7 @@ git blame <file># 以列表形式查看指定文件的历史修改记录
 参考链接：https://www.runoob.com/git/git-commit-history.html#git-log
 ```
 
-3. git分支操作
+### 3.4git分支操作
 ```bash
 # git branch 分支操作
 git branch # 查看所有本地分支
@@ -159,18 +158,9 @@ git rebase <branch_name> # 将本地当前分支的修改变基到另一分支�
 # 在rebase过程中，可能会出现冲突，git会停止rebase，并让你去解决冲突，解决完冲突后，首先使用`git add`更新索引，然后使用continue继续rebase或者abort来终止。
 git rebase --abort | --continue 
 ```
-> 使用rebase的场景
-> - 个人开发分支，同步公共分支的修改，不希望丢失个人开发分支的提交。  
-> 
-> 使用merge的场景
-> - 将个人开发分支的内容合并到主分支
 
-
-4. git本地与远程交互操作
+### 3.5git本地与远程交互操作
 ```bash
-# git clone 克隆
-git clone <版本库的网址> <本地目录名> # 指定一个本地目录，如省略即在当前目录生成一个与远程主机版本库同名的目录。
-
 #  git fetch 拉取
 git fetch [alias] #拉取远程仓库更新的数据
 git merge [alias]/[branch] # 上述命令执行完成后，将更新的数据合并到本地当前分支
@@ -191,3 +181,37 @@ git remote add <remote_name> <remote_url> #添加一个新的远程仓库，指�
 git push <远程主机名> <branch>:<remote_branch> #将本地分支版本上传到远程并合并
 git push --force origin master #如果本地与远程有差异，强制推送
 ```
+
+## 4.常见问题
+### 4.1git rebase和git merge的区别
+
+#### 合并前
+在使用git工具进行合作开发时，我们首先需要基于master分支创建一个个人开发分支feature。当我们在feature分支上开发了新功能时，另一位团队成员更新了master分支的内容，这会产生一个分叉的提交历史，如图所示。
+![origin](gitfigs/origin.png)
+
+#### 使用merge
+```bash
+git merge master
+git merge feature master
+```
+在feature分支创建一个合并提交，如图所示。
+![merge](gitfigs/merge.png)
+
+#### 使用rebase
+```bash
+git checkout feature
+git rebase master
+```
+将feature分支的提交历史rebase到master分支的提交历史顶端。rebase操作会为原始分支的每次提交创建全新的提交，并重写原始分支的提交历史。
+
+- 优势：使用rebase的**好处**是可以让项目提交历史变得干净整洁，其会产生一个线性的项目提交历史。
+- 缺点：rebase操作会导致丢失合并提交能够提供的上下文信息——我们无法知晓功能分支何时应用了上游分支的变更。
+![rebase](gitfigs/rebase.png)
+
+#### 使用场景
+- 使用rebase的场景
+  - 个人开发分支，同步公共分支的修改，不希望丢失个人开发分支的提交。
+- 使用merge的场景
+  - 将个人开发分支的内容合并到主分支
+
+参考链接：https://zhuanlan.zhihu.com/p/493953965
