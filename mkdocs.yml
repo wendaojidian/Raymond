@@ -87,3 +87,7 @@ plugins:
 nav:
     - 介绍: index.md
     - MKDocs: MKDocs.md
+    - git:
+          - git开发全搞定: git.md
+    - tools:
+          - md命令速查: md命令速查.md
