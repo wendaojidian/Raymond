@@ -2,12 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://wendaojidian.github.io/Raymond/</loc>
-         <lastmod>2023-10-07</lastmod>
+         <lastmod>2023-10-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wendaojidian.github.io/Raymond/MKDocs/</loc>
-         <lastmod>2023-10-07</lastmod>
+         <lastmod>2023-10-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wendaojidian.github.io/Raymond/git/</loc>
+         <lastmod>2023-10-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wendaojidian.github.io/Raymond/md%E5%91%BD%E4%BB%A4%08%E9%80%9F%E6%9F%A5/</loc>
+         <lastmod>2023-10-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
