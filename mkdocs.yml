@@ -86,8 +86,13 @@ plugins:
 
 nav:
     - 介绍: index.md
-    - MKDocs: MKDocs.md
+    - java:
+          - 多线程:
+                - java8并发任务编排器-Completable: java/java8并发任务编排器-Completable.md
+    - 读书笔记:
+          - 代码整洁之道: 读书笔记/代码整洁之道.md
     - git:
           - git开发全搞定: git.md
     - tools:
           - md命令速查: md命令速查.md
+          - MKDocs: MKDocs.md

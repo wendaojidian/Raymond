@@ -12,26 +12,24 @@
         <meta name="author" content="Raymond Lau">
       
       
-        <link rel="canonical" href="https://wendaojidian.github.io/Raymond/">
+        <link rel="canonical" href="https://wendaojidian.github.io/Raymond/java/java8%E5%B9%B6%E5%8F%91%E4%BB%BB%E5%8A%A1%E7%BC%96%E6%8E%92%E5%88%A9%E5%99%A8-Completable/">
       
       
       
-        <link rel="next" href="%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93/">
       
-      
-      <link rel="icon" href="assets/images/favicon.ico">
+      <link rel="icon" href="../../assets/images/favicon.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
     
     
       
-        <title>Raymond Lau's Blog</title>
+        <title>java8并发任务编排利器-CompletableFuture - Raymond Lau's Blog</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.bd3936ea.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bd3936ea.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.356b1318.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
       
       
 
@@ -50,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -75,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#java8-completablefuture" class="md-skip">
           跳转至
         </a>
       
@@ -91,7 +89,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="." title="Raymond Lau&#39;s Blog" class="md-header__button md-logo" aria-label="Raymond Lau's Blog" data-md-component="logo">
+    <a href="../.." title="Raymond Lau&#39;s Blog" class="md-header__button md-logo" aria-label="Raymond Lau's Blog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -111,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              介绍
+              java8并发任务编排利器-CompletableFuture
             
           </span>
         </div>
@@ -197,7 +195,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Raymond Lau&#39;s Blog" class="md-nav__button md-logo" aria-label="Raymond Lau's Blog" data-md-component="logo">
+    <a href="../.." title="Raymond Lau&#39;s Blog" class="md-nav__button md-logo" aria-label="Raymond Lau's Blog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -224,18 +222,9 @@
       
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -244,7 +233,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -327,7 +315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="java/java8并发任务编排器-Completable.md" class="md-nav__link">
+      <a href="../java8并发任务编排器-Completable.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -398,7 +386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93/" class="md-nav__link">
+      <a href="../../%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -461,7 +449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="git/" class="md-nav__link">
+      <a href="../../git/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -524,7 +512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="md%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5/" class="md-nav__link">
+      <a href="../../md%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -544,7 +532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="MKDocs/" class="md-nav__link">
+      <a href="../../MKDocs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -585,6 +573,63 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    背景
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    使用场景
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    -
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    api及用法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    原理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    总结
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    参考链接
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -601,8 +646,40 @@
   
 
 
-<h1 id="_1">写在前面<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>这是Raymond Lau的个人博客主页</p>
+<h1 id="java8-completablefuture">java8并发任务编排利器-CompletableFuture<a class="headerlink" href="#java8-completablefuture" title="Permanent link">&para;</a></h1>
+<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>我们通常会使用多线程来提高IO密集型任务的执行效率，以充分发挥计算机的性能。 对此，Java提供了Thread类
+和Runnable接口，开发人员可以通过继承Thread类或实现Runnable接口，再调用<code>start()</code>方法开启一个子线程。
+这两种方法存在一个缺陷，开发人员在主线程创建并执行一个子线程之后，就失去了对子线程的控制，也无法优雅地获取
+线程执行结果。</p>
+<blockquote>
+<p>在Java中可以通过共享变量获取子线程执行结果，但存在以下缺陷：</p>
+<p><strong>1.线程安全问题</strong>：共享变量在多线程环境下可能存在竞态条件和数据不一致的问题。如果多个线程同时访问和修改共享变量，
+可能导致意外的结果或者不确定的行为。使用<code>volatile</code>关键字修饰共享变量可以确保可见行，但无法解决原子性和有序性问题。</p>
+<p><strong>2.缺乏通知机制</strong>：通过共享变量获取子线程执行结果通常需要使用轮询的方法检查变量的状态，这会造成CPU资源浪费。
+同时，轮询间隔时间难以确定，可能导致延迟获取结果。</p>
+<p><strong>3.难以处理异常</strong>：如果子线程发生异常，通过共享变量的方式难以及时捕获和处理异常。</p>
+</blockquote>
+<p>Java1.5引入Callable和Future接口，用于获取子线程执行结果。Future用来表示异步计算的结果，可以通过阻塞或者
+轮询的方式获取结果，但不支持回调，对于更加复杂的场景，比如并发任务之间存在依赖关系，下游任务需要依赖上游任务的
+执行结果，此时，使用Callable+FutureTask的组合编程会十分臃肿。</p>
+<blockquote>
+<p>Future接口在Java5中被引入，设计初衷是对将来某个时刻会产生的结果进行建模。它建模了一种异步运算，
+返回一个执行结果的引用，当运算结束后，这个引用被返回给调用方。在Future中触发那些潜在耗时的操作完成。《Java8实战》</p>
+</blockquote>
+<p>由此，Java1.8引入了CompletableFuture，对Future的功能进行了扩展，其提供了丰富的api，方便开发人员对复杂并发任务
+进行编排，简化开发流程。</p>
+<h2 id="_2">使用场景<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>多任务并发执行：即多个相互之间没有关联的IO密集型任务，可以通过并发执行提高系统效率。Completable可以获取各个
+subTask的执行结果，并对结果进行整合。</li>
+</ul>
+<p><img alt="scene-1" src="../CompletableFuture-figs/scene-1.png" /></p>
+<h2 id="-">-<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
+<h2 id="api">api及用法<a class="headerlink" href="#api" title="Permanent link">&para;</a></h2>
+<h2 id="_3">原理<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_4">总结<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_5">参考链接<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 
 
 
@@ -660,10 +737,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="assets/javascripts/bundle.94c44541.min.js"></script>
+      <script src="../../assets/javascripts/bundle.94c44541.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
