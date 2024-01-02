@@ -129,7 +129,7 @@ ___
 
 [任务编排][link1]
 
-[link1]:https://xie.infoq.cn/article/3f3c0666d0a8998821a63ca0a
+
 
 
 # 图片
@@ -161,3 +161,5 @@ ___
 使用 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd> 重启电脑
 ```
 使用 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd> 重启电脑
+
+[link1]:https://xie.infoq.cn/article/3f3c0666d0a8998821a63ca0a
