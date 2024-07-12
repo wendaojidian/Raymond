@@ -87,12 +87,18 @@ plugins:
 nav:
     - 介绍: index.md
     - java:
-          - 多线程:
-                - java8并发任务编排器-Completable: java/java8并发任务编排利器-Completable.md
+        - 多线程:
+            - java8并发任务编排器-Completable: java/java8并发任务编排利器-Completable.md
+        - netty:
+            - netty笔记: java/netty/netty笔记-1.md
     - 读书笔记:
-          - 代码整洁之道: 读书笔记/代码整洁之道.md
+        - 后端技术:
+            - 深入理解分布式系统: 读书笔记/后端技术/深入理解分布式系统.md
+            - 代码整洁之道: 读书笔记/代码整洁之道.md
+        - 投资:
+            - 指数基金投资指南: 读书笔记/投资/指数基金投资指南.md
     - git:
-          - git开发全搞定: git.md
+        - git开发全搞定: git.md
     - tools:
-          - md命令速查: md命令速查.md
-          - MKDocs: MKDocs.md
+        - md命令速查: md命令速查.md
+        - MKDocs: MKDocs.md
