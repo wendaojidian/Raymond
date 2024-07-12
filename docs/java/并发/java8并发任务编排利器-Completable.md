@@ -33,7 +33,7 @@ Java1.5引入Callable和Future接口，用于获取子线程执行结果。Futur
 - 多任务并发执行：即多个相互之间没有关联的IO密集型任务，可以通过并发执行提高系统效率。Completable可以获取各个
 subTask的执行结果，并对结果进行整合。
 
-![scene-1](./CompletableFuture-figs/scene-1.png)
+![scene-1](CompletableFuture-figs/scene-1.png)
 
 - 
 - 
