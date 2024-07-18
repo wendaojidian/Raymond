@@ -100,3 +100,5 @@ nav:
     - tools:
         - md命令速查: md命令速查.md
         - MKDocs: MKDocs.md
+    - tests:
+        - testci: testci.md
