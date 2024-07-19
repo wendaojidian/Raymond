@@ -26,8 +26,19 @@ theme:
         - content.code.annotation
         - content.code.copy
     palette:
-        primary: 'amber'
-        accent: 'amber'
+        - scheme: default
+          toggle:
+            icon: material/toggle-switch-off-outline
+            name: Switch to dark mode
+          primary: teal
+          accent: amber
+        - scheme: slate
+          toggle:
+              icon: material/toggle-switch
+              name: Switch to light mode
+          primary: teal
+          accent: indigo
+
 
     feature:
         tabs: true
